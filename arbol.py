@@ -9,11 +9,19 @@ class Nodo:
 
 
 
-def buscarSubArbol(arbol, elemento) => {
+def buscarSubArbol(root, elemento) => {
 
-    if root = None 
-    return arbol
+    if root is None:
+        root = new Nodo(elemento)
 
-    for sub arbol in arbol.hijos:
+    if(elemento< root.value) {
+          
+        buscarSubArbol(root.left, elemento  )
+    }
+
+    else:
+        root.right = buscarSubArbol(root.right, elemento    )
+    
+    return root
 
 }
